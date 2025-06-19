@@ -16,8 +16,6 @@ const displayBtnCategory = (categories) => {
     btnContainer.appendChild(div)
   });
 };
-
-
 // btn categories section end
 
 // showCategoryAnimal section start 
