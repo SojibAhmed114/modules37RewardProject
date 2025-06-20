@@ -76,34 +76,42 @@
     <section id="btn-container" class=" grid grid-cols-2 md:grid-cols-4 gap-5 justify-between "> </section>
     <section id="btn-container" class="my-10 flex gap-5 justify-between"> 
         <p class="text-xl">Best Deal For you</p>
-        <button class="btn w-32 text-white btn-success">Sort by Price</button>
+        <button onclick="sort()" class="btn w-32 text-white btn-success">Sort by Price</button>
     </section>
     <!-- dynamic display section  -->
-    <!-- spinner  -->
-     <!-- <div class="flex justify-center w-full ">
-       <div id="loading-spinner" class="none">
-         <span class="text-green-600 loading loading-dots loading-lg"></span>
-         <span class="text-green-600 loading loading-infinity loading-lg"></span>
-         <span class="text-green-600 loading loading-dots loading-lg"></span>
-        </div>
-      </div> -->
+  
 
       <!-- card section start -->
     <section class="my-12">
-      <div class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div id="dynamicData" class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <div class="lg:col-span-3">
           <!-- spinner -->
-          <div></div>
+          <div id="loading-spinner" class="hidden">
+            <div class="relative flex justify-center items-center">
+              <div class="absolute animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-purple-500"></div>
+              <img src="./images/logo.webp"  class="rounded-full ">
+            </div>
+        </div>
           <!-- card  -->
           <div id="all-pets" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
         </div>
-        <div class="lg:cols-span-3 bg-red-500">sdagsad</div>
+        <div id="liked-pets" class="grid grid-cols-2 gap-2 border rounded-xl h-fit w-full"></div>
       </div>
     </section>
 
-  <!-- Open the modal using ID.showModal() method -->
-  <div id="modalContainer"></div>
-  <div id="condDownModalContainer"></div>
+    
+
+    <!-- adapt modal here  -->
+    <!-- Open the modal using ID.showModal() method -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div class="flex flex-col justify-center items-center w-full ">
+      <img src="./images/logo.webp" alt="photo">
+        <h3 class="text-3xl font-bold">congratulations</h3>
+        <p id="countdown-container" class="py-4 text-6xl font-bold">3</p>
+    </div>
+  </div>
+</dialog>
 
   </main>
 
@@ -171,6 +179,7 @@
     </footer>
   </footer>
   <!-- <script src="js/main.js"></script> -->
+  <script src="js/utility.js"></script>
   <script src="js/reward.js"></script>
 </body>
 </html>

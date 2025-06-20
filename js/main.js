@@ -92,10 +92,7 @@ const CondDownModalLoad =() => {
   const condDownModalContainer = document.getElementById('condDownModalContainer');
   condDownModalContainer.innerHTML = `
   <dialog id="my_modal_1" class="modal">
-  <div class="modal-box flex flex-col justify-center items-center ">
-  <img src="./images/logo.webp" alt="photo">
-    <h3 class="text-3xl font-bold">congratulations</h3>
-    <p id="second" class="py-4 text-6xl font-bold">3</p>
+  
   </div>
 </dialog>
   `;
