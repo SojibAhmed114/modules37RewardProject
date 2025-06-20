@@ -34,6 +34,7 @@ const loadPetsByCategory = async (category) => {
   }, 500);
 };
 
+
 const displayBtnCategory = (categories) => {
   const btnContainer = document.getElementById("btn-container");
   categories.forEach((element) => {
@@ -90,7 +91,7 @@ const displayPets = (data) => {
     <div class="flex justify-between border-t pt-5">
       <button onclick="like('${image}')" class="btn btn-outline btn-accent"><i class="fa-regular fa-thumbs-up"></i></button>
       <button onclick="adoptButton(this)" class="btn btn-outline btn-accent">Adopt</button>
-      <button class="btn btn-outline btn-accent">Details</button>
+      <button onclick="petDetails(${petId})" class="btn btn-outline btn-accent">Details</button>
     </div>
     `;
     petContainer.appendChild(div);
@@ -114,5 +115,7 @@ const adoptButton = (e) => {
     }
   }, 1000);
 };
+
+
 loadCategory();
 loadAllPets();
